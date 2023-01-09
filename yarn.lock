@@ -406,10 +406,20 @@
     "@tanstack/react-router" "0.0.1-beta.45"
     date-fns "^2.29.1"
 
-"@tanstack/react-router@0.0.1-beta.45", "@tanstack/react-router@^0.0.1-beta-45":
+"@tanstack/react-router@0.0.1-beta.45":
   version "0.0.1-beta.45"
   resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-0.0.1-beta.45.tgz#edd9b4ccb9c5538a238071d42eb37e8dc7364dca"
   integrity sha512-n3sLDLVkmhHyVXxaM/KYHjZBIW0fJGqX4Q+1itX+X3ucaJzN3OQTQ7afO135frBjOsIwEp8thKlTbjsKSWAkcw==
+  dependencies:
+    "@babel/runtime" "^7.16.7"
+    "@solidjs/reactivity" "^0.0.6"
+    "@tanstack/router-core" "0.0.1-beta.45"
+    use-sync-external-store "^1.2.0"
+
+"@tanstack/react-router@^0.0.1-beta-45":
+  version "0.0.1-beta.48"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-router/-/react-router-0.0.1-beta.48.tgz#4fd250dccd3cd40b25a9d4eb1551429b327167bf"
+  integrity sha512-AR1QCDolDuFcvvDhLW8/Ez/BV8CsR/BQ4D8t6CxCbjSAaKYsD6iyuRb3nRToq57cy9hQmphshgRSli9uAiQkoA==
   dependencies:
     "@babel/runtime" "^7.16.7"
     "@solidjs/reactivity" "^0.0.6"
@@ -426,10 +436,10 @@
     history "^5.2.0"
     tiny-invariant "^1.3.1"
 
-"@ts-react/form@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@ts-react/form/-/form-1.0.8.tgz#98f855e05ada6cd9e17e3bfa975a66c385712c7a"
-  integrity sha512-fI70TVsM8Nn7LS+B8sFDCqXH1QOdzo1HOAyBNYbm/KLCfBuQ8ybG7w1yM+JYEw1Z21fVr/EwZPHFonH5v8ks/A==
+"@ts-react/form@1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@ts-react/form/-/form-1.0.6.tgz#96042ec6c364bff038d7565054142acf768a37ca"
+  integrity sha512-w2TCVA5YG4SiGEupMzMeLaJp+W53dcwn84QzK/OGHTqoSOdPGkFpbIyoLQ0qb6nhunBLnta7EyFnlWaMeRDkOA==
 
 "@types/prop-types@*":
   version "15.7.5"
@@ -1118,6 +1128,11 @@ to-regex-range@^5.0.1:
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
+
+ts-toolbelt@^9.6.0:
+  version "9.6.0"
+  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-9.6.0.tgz#50a25426cfed500d4a09bd1b3afb6f28879edfd5"
+  integrity sha512-nsZd8ZeNUzukXPlJmTBwUAuABDe/9qtVDelJeT/qW0ow3ZS3BsQJtNkan1802aM9Uf68/Y8ljw86Hu0h5IUW3w==
 
 typescript@^4.9.3:
   version "4.9.4"

@@ -1,9 +1,15 @@
 import { useTsController } from "@ts-react/form";
 import { InputHTMLAttributes } from "react";
+import { DefaultHTMLProps } from "src/types";
+import { O } from "ts-toolbelt";
 
-export default function CheckBox({
-  label,
-}: { label?: string } & InputHTMLAttributes<HTMLInputElement>) {
+export type CheckboxProps = O.Merge<
+  // Omit<InputHTMLAttributes<HTMLInputElement>, "name" | "value">,
+  DefaultHTMLProps,
+  { label?: string }
+>;
+
+export default function CheckBox({ label }: CheckboxProps) {
   const { field, error } = useTsController<string>();
   return (
     <div className="border-blue border-1 border  p-4">

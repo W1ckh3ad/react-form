@@ -6,7 +6,7 @@ import {
   Link,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-import { HarderExample } from "./examples/harder";
+import { HarderExample } from "./examples/typescript-not-working";
 import { SimpleExample } from "./examples/simple";
 
 const rootRoute = createRouteConfig({
@@ -76,6 +76,7 @@ const simpleFormRoute = rootRoute.createRoute({
 
 const harderFormRoute = rootRoute.createRoute({
   path: "harder",
+  
 
   component: () => {
     return (
