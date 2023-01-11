@@ -1,22 +1,12 @@
 import { useTsController } from "@ts-react/form";
 import { InputHTMLAttributes, useCallback } from "react";
-import { DefaultHTMLProps } from "src/types";
-import { O } from "ts-toolbelt";
 
-export type SelectProps = O.Merge<
-  // Omit<InputHTMLAttributes<HTMLSelectElement>, "name" | "value">,
-  Pick<
-    InputHTMLAttributes<HTMLSelectElement>,
-    "onChange" | "onBlur" | "readOnly" |"disabled"
-  > &
-    DefaultHTMLProps,
-  {
+export default function Select(
+  props: Omit<InputHTMLAttributes<HTMLSelectElement>, "name" | "value"> & {
     label?: string;
     enumValues: string[];
   }
->;
-
-export default function Select(props: SelectProps) {
+) {
   const { onChange, onBlur, readOnly, label, enumValues, ...spreadProps } =
     props;
   const { field, error } = useTsController<number | string>();

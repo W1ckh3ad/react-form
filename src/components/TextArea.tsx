@@ -1,21 +1,11 @@
 import { useTsController } from "@ts-react/form";
 import { InputHTMLAttributes, useCallback } from "react";
-import { DefaultHTMLProps } from "src/types";
-import { O } from "ts-toolbelt";
 
-export type TextAreaProps = O.Merge<
-  // Omit<InputHTMLAttributes<HTMLTextAreaElement>, "name" | "value">,
-  Pick<
-    InputHTMLAttributes<HTMLTextAreaElement>,
-    "onChange" | "onBlur" | "readOnly" |"disabled"
-  > &
-    DefaultHTMLProps,
-  { label?: string }
->;
-
-export default function TextArea(props: TextAreaProps) {
-  console.log("textareaprops", props);
-
+export default function TextArea(
+  props: Omit<InputHTMLAttributes<HTMLTextAreaElement>, "name" | "value"> & {
+    label?: string;
+  }
+) {
   const { onChange, onBlur, readOnly, label, ...spreadProps } = props;
   const { field, error } = useTsController<number | string>();
   const handleChange = useCallback<

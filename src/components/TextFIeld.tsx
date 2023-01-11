@@ -1,19 +1,11 @@
 import { useTsController } from "@ts-react/form";
 import { InputHTMLAttributes, useCallback } from "react";
-import { DefaultHTMLProps } from "src/types";
-import { O } from "ts-toolbelt";
 
-export type TextFieldProps = O.Merge<
-  // Omit<InputHTMLAttributes<HTMLInputElement>, "name" | "value">,
-  Pick<
-    InputHTMLAttributes<HTMLInputElement>,
-    "onChange" | "onBlur" | "readOnly" | "disabled"
-  > &
-    DefaultHTMLProps,
-  { label?: string }
->;
-
-export default function TextField(props: TextFieldProps) {
+export default function TextField(
+  props: Omit<InputHTMLAttributes<HTMLInputElement>, "name" | "value"> & {
+    label?: string;
+  }
+) {
   console.log("textfieldprops", props);
   const { onChange, onBlur, readOnly, label, ...spreadProps } = props;
   const { field, error } = useTsController<number | string>();

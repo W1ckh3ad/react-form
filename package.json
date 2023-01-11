@@ -16,7 +16,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.41.5",
-    "ts-toolbelt": "^9.6.0",
     "zod": "^3.20.2"
   },
   "devDependencies": {
